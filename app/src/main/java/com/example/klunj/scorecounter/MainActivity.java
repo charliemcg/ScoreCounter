@@ -13,12 +13,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final int[] count = new int[1];
+
         final Button button = (Button) findViewById(R.id.button);
         final TextView textView = (TextView) findViewById(R.id.textView);
 
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 textView.setText("Success");
+                count[0]++;
+                System.out.println(count[0]);
             }
         });
 
